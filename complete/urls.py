@@ -16,12 +16,14 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from login.views import *
+from django.contrib.auth import views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^CompleteApp/', include('CompleteApp.urls')),
     url(r'^logout/$', logout_page),
-    url(r'^accounts/login/$', include('django.contrib.auth.views.login'), name='login'),  # If user is not login it will redirect to login page
+    url(r'^accounts/login/$', views.login),  # If user is not login it will redirect to login page
     url(r'^register/$', register),
     url(r'^register/success/$', register_success),
     url(r'^home/$', home),
