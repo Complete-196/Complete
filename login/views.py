@@ -8,7 +8,6 @@ from django.contrib.auth import logout
 from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
-from django.template import RequestContext
 from django.contrib.auth.models import User
 from CompleteApp import views
 
