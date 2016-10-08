@@ -10,8 +10,6 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
-from django.shortcuts import render
 from CompleteApp import views
 
 print "before"
@@ -28,14 +26,8 @@ def register(request):
             return HttpResponseRedirect('/register/success/')
     else:
         form = RegistrationForm()
-    variables = RequestContext(request, {
-        'form': form
-    })
 
-    return render_to_response(
-        'registration/register.html',
-        variables,
-    )
+    return render(request, 'registration/register.html', {'form':form})
 
 
 
@@ -48,6 +40,7 @@ def register_success(request):
 def logout_page(request):
     logout(request)
     return HttpResponseRedirect('/accounts/login')
+
 
 
 @login_required

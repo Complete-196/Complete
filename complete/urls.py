@@ -22,6 +22,7 @@ from django.contrib.auth import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^CompleteApp/', include('CompleteApp.urls')),
+    url(r'^$', views.login),
     url(r'^logout/$', logout_page),
     url(r'^accounts/login/$', views.login),  # If user is not login it will redirect to login page
     url(r'^accounts/logout/$', views.logout, {'next_page' : '/accounts/login'}),

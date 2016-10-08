@@ -8,10 +8,7 @@
 
 
 {% block content %}
-    {% load static %}
-    <video playsinline autoplay muted loop poster="backVid.jpg" id="bgvid">
-        <source src="{% static 'backVid.mp4' %}" type="video/mp4">
-    </video>
+
 
      {% if form.errors %}
         <p>Your username and password didn't match. Please try again.</p>
