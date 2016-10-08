@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class RegistrationForm(forms.Form):
+
     username = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(attrs=dict(required=True, max_length=30)),
                                 label=_("Username"), error_messages={
             'invalid': _("This value must contain only letters, numbers and underscores.")})
@@ -15,6 +16,8 @@ class RegistrationForm(forms.Form):
     password2 = forms.CharField(
         widget=forms.PasswordInput(attrs=dict(required=True, max_length=30, render_value=False)),
         label=_("Password (again)"))
+
+    print username, email, password1, password2
 
     def clean_username(self):
         try:

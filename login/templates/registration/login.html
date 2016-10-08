@@ -1,17 +1,40 @@
 {% extends "base.html" %}
-{% block title %}Login{% endblock %}
-{% block head %}Login{% endblock %}
+{% block title %}
+    Login
+{% endblock %}
+{% block head %}
+        Complete
+{% endblock %}
+
+
 {% block content %}
-    {% if form.errors %}
+    {% load static %}
+    <video playsinline autoplay muted loop poster="backVid.jpg" id="bgvid">
+        <source src="backVid.webm" type="video/webm">
+        <source src="{% static 'backVid.mp4' %}" type="video/mp4">
+    </video>
+
+     {% if form.errors %}
         <p>Your username and password didn't match. Please try again.</p>
     {% endif %}
-    <form method="post" action="../">{% csrf_token %}
-        <table border="0">
-            <tr><th><label for="id_username">Username:</label></th><td>{{ form.username }}</td></tr>
-            <tr><th><label for="id_password">Password:</label></th><td>{{ form.password }}</td></tr>
-        </table>
-        <input type="submit" value="Login" />
-        <input type="hidden" name="next" value="/home" />
-    </form>
-    <a href="/register">Register</a>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form" id="register">
+                <input type="text" name="username" placeholder="Username"/>
+                <input type="text" name="email" placeholder="Email"/>
+                <input type="text" name="password" placeholder="Password"/>
+                <input type="text" name="password1" placeholder="Password (again)"/>
+                <input type="submit" value="Create"/>
+                <p class="message"> <a onclick="myFunction('login')">Login</a></p>
+            </form>
+            <form class="login-form" method="post" action="." id="login">{% csrf_token %}
+                <td>{{ form.username }}</td>
+                <td>{{ form.password }}</td>
+                <button>login</button>
+                <p class="message"> <a onclick="myFunction('register')">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+
 {% endblock %}
+

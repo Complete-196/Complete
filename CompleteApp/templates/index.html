@@ -5,6 +5,8 @@
   <body>
     <h1>Welcome to Complete app</h1>
     {% block content %}
+        <p>Welcome {{ user.username }} !!!</p>
+        <a href="/logout/">Logout</a>
     {% endblock %}
   </body>
 </html>

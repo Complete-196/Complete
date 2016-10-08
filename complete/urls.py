@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^CompleteApp/', include('CompleteApp.urls')),
     url(r'^logout/$', logout_page),
     url(r'^accounts/login/$', views.login),  # If user is not login it will redirect to login page
+    url(r'^accounts/logout/$', views.logout, {'next_page' : '/accounts/login'}),
     url(r'^register/$', register),
     url(r'^register/success/$', register_success),
     url(r'^home/$', home),

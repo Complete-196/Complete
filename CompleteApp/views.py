@@ -1,9 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render_to_response
 
-def index(request,):
+@login_required
+def index(request):
     return render_to_response("index.html",
-                               {"Testing" : "Django Template Inheritance ",
+                               {"user" : request.user,
                                "HelloHello" : "Hello World - Django"})
