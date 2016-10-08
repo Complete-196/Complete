@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b65c89d-0321-4f43-87cb-e2dbc5f214fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/complete/loginapp.sqlite" afterPath="$PROJECT_DIR$/complete/loginapp.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/views.py" afterPath="$PROJECT_DIR$/login/views.py" />
-    </list>
+    <list default="true" id="7b65c89d-0321-4f43-87cb-e2dbc5f214fd" name="Default" comment="" />
     <ignored path="complete.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -109,8 +105,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="61">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -151,8 +147,8 @@
         <option value="$PROJECT_DIR$/complete/settings.py" />
         <option value="$PROJECT_DIR$/login/templates/registration/register.html" />
         <option value="$PROJECT_DIR$/login/views.py" />
-        <option value="$PROJECT_DIR$/login/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/complete/urls.py" />
+        <option value="$PROJECT_DIR$/login/templates/registration/login.html" />
       </list>
     </option>
   </component>
@@ -1096,8 +1092,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="61">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="22" />
           <folding />
         </state>
       </provider>
