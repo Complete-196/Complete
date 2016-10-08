@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import django.contrib.auth
-django.contrib.auth.LOGIN_URL = '/'
+LOGIN_REDIRECT_URL = '/CompleteApp/'
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

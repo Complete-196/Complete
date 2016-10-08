@@ -52,4 +52,4 @@ def logout_page(request):
 
 @login_required
 def home(request):
-    views.index(request)
+    return views.index(request)
