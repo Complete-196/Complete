@@ -5,8 +5,18 @@
   <body>
     <h1>Welcome to Complete app</h1>
     {% block content %}
-        <p>Welcome {{ user.username }} !!!</p>
+        <p>Welcome {{ user.username }}</p>
+        <table>
+            {% for item in query_results %}
+                <tr>
+                    <td>{{ item.title }}!!!</td>
+                    <td>{{ item.dueTime }}</td>
+                    <td>{{ item.duration }}</td>
+                </tr>
+            {% endfor %}
+        </table>
         <a href="/logout/">Logout</a>
+        <a href="addNew">New event</a>
     {% endblock %}
   </body>
 </html>

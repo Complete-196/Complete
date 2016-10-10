@@ -1,3 +1,6 @@
+import json
+
+from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -11,22 +14,28 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from CompleteApp import views
 
-print "before"
+
+
 @csrf_protect
 def register(request):
+
     if request.method == 'POST':
-        form = RegistrationForm(request.POST)
-        if form.is_valid():
+        form1 = RegistrationForm(request.POST)
+        message = 'something wrong!'
+        if form1.is_valid():
             user = User.objects.create_user(
-                username=form.cleaned_data['username'],
-                password=form.cleaned_data['password1'],
-                email=form.cleaned_data['email']
+                username=form1.cleaned_data['username'],
+                password=form1.cleaned_data['password1'],
+                email=form1.cleaned_data['email']
             )
             return HttpResponseRedirect('/register/success/')
+        else:
+            return HttpResponse(json.dumps({'message': message}))
     else:
-        form = RegistrationForm()
+        form1 = RegistrationForm()
 
-    return render(request, 'registration/register.html', {'form':form})
+
+    return render(request, 'registration/login.html', {'form':form1})
 
 
 

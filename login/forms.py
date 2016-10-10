@@ -17,7 +17,6 @@ class RegistrationForm(forms.Form):
         widget=forms.PasswordInput(attrs=dict(required=True, max_length=30, render_value=False)),
         label=_("Password (again)"))
 
-    print username, email, password1, password2
 
     def clean_username(self):
         try:
