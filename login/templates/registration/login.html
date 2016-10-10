@@ -10,26 +10,25 @@
 {% block content %}
 
 
-
     <div class="login-page">
         <div class="form">
 
             <form class="register-form" id="register" method="post" action="{% url 'register' %}">
                 {% csrf_token %}
-                <p class="message"></p>
                 <input type="text" name="username" placeholder="Username"/>
                 <input type="text" name="email" placeholder="Email"/>
                 <input type="password" name="password1" placeholder="Password"/>
                 <input type="password" name="password2" placeholder="Password (again)"/>
                 <input type="submit" value="Create"/>
+
                 <p class="message"> <a onclick="myFunction('login')">Login</a></p>
             </form>
-            <form class="login-form" method="post" action="." id="login">{% csrf_token %}
+            <form class="login-form" method="post" action="{% url 'login' %}" id="login">{% csrf_token %}
                 {% if form.errors %}
                     <p>Your username and password didn't match. Please try again.</p>
                 {% endif %}
-                <td>{{ form.username }}</td>
-                <td>{{ form.password }}</td>
+                <input type="text" name="username" placeholder="Username"/>
+                <input type="password" name="password" placeholder="Password"/>
                 <button>login</button>
                 <p class="message"> <a onclick="myFunction('register')">Create an account</a></p>
             </form>

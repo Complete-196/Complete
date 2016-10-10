@@ -1,5 +1,4 @@
-import json
-
+from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -30,12 +29,11 @@ def register(request):
             )
             return HttpResponseRedirect('/register/success/')
         else:
-            return HttpResponse(json.dumps({'message': message}))
+            messages.error(request, form1.errors)
     else:
         form1 = RegistrationForm()
 
-
-    return render(request, 'registration/login.html', {'form':form1})
+    return render(request, 'registration/login.html', {'form1':form1})
 
 
 
