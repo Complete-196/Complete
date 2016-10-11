@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}
+    Login
+{% endblock %}
+{% block head %}
+        Complete
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="login-page">
+        <div class="form">
+
+            <form class="register-form" id="register" method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+                {% if form1.errors %}
+                    {% for i in form1.errors.values %}
+                        <p>{{ i }}</p>
+                    {% endfor %}
+                {% endif %}
+                <input type="text" name="username" placeholder="Username"/>
+                <input type="text" name="email" placeholder="Email"/>
+                <input type="password" name="password1" placeholder="Password"/>
+                <input type="password" name="password2" placeholder="Password (again)"/>
+                <input type="submit" value="Create"/>
+
+                <p class="message"> <a onclick="myFunction('login')">Login</a></p>
+            </form>
+            <form class="login-form" method="post" action="{% url 'login' %}" id="login">{% csrf_token %}
+                {% if form.errors %}
+                    <p>Your username and password didn't match. Please try again.</p>
+                {% endif %}
+                <input type="text" name="username" placeholder="Username"/>
+                <input type="password" name="password" placeholder="Password"/>
+                <button>login</button>
+                <p class="message"> <a onclick="myFunction('register')">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        if (window.location.href.indexOf('/register')>=0){
+            document.getElementById('register').className='login-form';
+            document.getElementById('login').className='register-form';
+            }
+    </script>
+
+{% endblock %}
+

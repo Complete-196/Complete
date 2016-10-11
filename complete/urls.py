@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from login.views import *
+from django.contrib.auth import views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^CompleteApp/', include('CompleteApp.urls')),
+    url(r'^$', views.login),
+    url(r'^logout/$', logout_page),
+    url(r'^accounts/login/$', views.login, name='login'),  # If user is not login it will redirect to login page
+    url(r'^accounts/logout/$', views.logout, {'next_page' : '/accounts/login'}),
+    url(r'^register/$', register, name='register'),
+    url(r'^register/success/$', register_success),
+    url(r'^home/$', home),
 ]
