@@ -7,6 +7,9 @@
     {% block content %}
         <p>Welcome {{ user.username }}</p>
         <table>
+                    <td>Task</td>
+                    <td>Due Date</td>
+                    <td>Duration</td></br>
             {% for item in query_results %}
                 <tr>
                     <td>{{ item.title }}!!!</td>

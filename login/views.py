@@ -29,7 +29,7 @@ def register(request):
             )
             return HttpResponseRedirect('/register/success/')
         else:
-            messages.error(request, form1.errors)
+            print form1.errors.values
     else:
         form1 = RegistrationForm()
 

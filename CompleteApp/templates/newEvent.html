@@ -7,14 +7,13 @@
     <div>
         <form method="post" action="."> {% csrf_token %}
 
-        <input type="text" name="title" placeholder="Your Task"></input>
-        <button name="color" style="background-color: #F32D12; border: solid 1px; border-radius:50%; width: 14px; height: 14px"></button>
-        <input type="date" name="date" value="today"></input><!--I want to set the value to date to today if possible-->
-        <input type="time" name="due" value="00:00"></input>
-        <input type="text" name="duration" placeholder="How long it takes"></input>
+        <input type="text" name="title" placeholder="Your Task"/>
+        <button name="color" style="background-color: #F32D12; border: solid 1px; border-radius:50%; width: 14px; height: 14px"></button></br>
+        <input type="date" name="date" value="today"/><!--I want to set the value to date to today if possible-->
+        <input type="time" name="due" value="00:00"/></br>
+        <input type="text" name="duration" placeholder="How long it takes"/></br>
 
             <button name="Create">Create</button>
-            <button name="Reset">Reset</button>
         </form>
     </div>   
         

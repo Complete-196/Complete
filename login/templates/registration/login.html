@@ -9,12 +9,16 @@
 
 {% block content %}
 
-
     <div class="login-page">
         <div class="form">
 
             <form class="register-form" id="register" method="post" action="{% url 'register' %}">
                 {% csrf_token %}
+                {% if form1.errors %}
+                    {% for i in form1.errors.values %}
+                        <p>{{ i }}</p>
+                    {% endfor %}
+                {% endif %}
                 <input type="text" name="username" placeholder="Username"/>
                 <input type="text" name="email" placeholder="Email"/>
                 <input type="password" name="password1" placeholder="Password"/>
@@ -34,6 +38,14 @@
             </form>
         </div>
     </div>
+
+
+    <script>
+        if (window.location.href.indexOf('/register')>=0){
+            document.getElementById('register').className='login-form';
+            document.getElementById('login').className='register-form';
+            }
+    </script>
 
 {% endblock %}
 
