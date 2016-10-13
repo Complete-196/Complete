@@ -12,11 +12,8 @@
     </head>
     <body>
         <h1>{% block head %}{% endblock %}</h1>
-        {% load static %}
-                <video playsinline autoplay muted loop poster="backVid.jpg" id="bgvid">
-                    <source src="{% static 'backVid.mp4' %}" type="video/mp4">
-                </video>
-        {% block content %}{% endblock %}
+        {% block content %}
+        {% endblock %}
 
     </body>
 </html>

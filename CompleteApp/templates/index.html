@@ -1,25 +1,34 @@
-<html>
-  <head>
-    <title>This is Hello World app!</title>
-  </head>
-  <body>
-    <h1>Welcome to Complete app</h1>
+{% extends "base.html" %}
+{% block title %}
+    Login
+{% endblock %}
+{% block head %}
+        Complete
+{% endblock %}
+
+
     {% block content %}
-        <p>Welcome {{ user.username }}</p>
-        <table>
-                    <td>Task</td>
-                    <td>Due Date</td>
-                    <td>Duration</td></br>
-            {% for item in query_results %}
-                <tr>
-                    <td>{{ item.title }}!!!</td>
-                    <td>{{ item.dueTime }}</td>
-                    <td>{{ item.duration }}</td>
-                </tr>
-            {% endfor %}
-        </table>
-        <a href="/logout/">Logout</a>
-        <a href="addNew">New event</a>
+        <div class="form">
+            <h2>Welcome {{ user.username }}</h2>
+            <table>
+                <colgroup>
+                    <col span="3">
+                </colgroup>
+                        <td>Task</td>
+                        <td>Due Date</td>
+                        <td>Duration</td></br>
+                {% for item in query_results %}
+
+                    <tr>
+                        <td>{{ item.title }}!!!</td>
+                        <td>{{ item.dueTime }}</td>
+                        <td>{{ item.duration }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <div id="x"></div>
+            <a href="addNew">New event</a>
+            <a href="/logout/">Logout</input>
+
+        </div>
     {% endblock %}
-  </body>
-</html>
