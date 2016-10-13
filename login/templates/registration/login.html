@@ -8,20 +8,24 @@
 
 
 {% block content %}
+   {% load static %}
+       <video playsinline autoplay muted loop poster="backVid.jpg" id="bgvid">
+           <source src="{% static 'backVid.mp4' %}" type="video/mp4">
+       </video>
 
     <div class="login-page">
         <div class="form">
 
             <form class="register-form" id="register" method="post" action="{% url 'register' %}">
                 {% csrf_token %}
-                {% if form1.errors %}
-                    {% for i in form1.errors.values %}
-                        <p>{{ i }}</p>
-                    {% endfor %}
-                {% endif %}
+
+                {{ form1.username.errors }}
                 <input type="text" name="username" placeholder="Username"/>
+                {{ form1.email.errors }}
                 <input type="text" name="email" placeholder="Email"/>
+                {{ form1.password1.errors }}
                 <input type="password" name="password1" placeholder="Password"/>
+                {{ form1.password2.errors }}
                 <input type="password" name="password2" placeholder="Password (again)"/>
                 <input type="submit" value="Create"/>
 

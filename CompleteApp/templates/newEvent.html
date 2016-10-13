@@ -1,21 +1,55 @@
-<html>
-  <head>
-    <title>New Event</title>
-  </head>
-  <body>
-    <h1>New Event</h1>
-    <div>
+{% extends "base.html" %}
+{% block title %}
+    New Event
+{% endblock %}
+{% block head %}
+        New Event
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="form">
         <form method="post" action="."> {% csrf_token %}
 
-        <input type="text" name="title" placeholder="Your Task"/>
+        {{ form.title.errors }}
+        <input type="text" style="width:90%;" name="title" placeholder="Your Task"/>
         <button name="color" style="background-color: #F32D12; border: solid 1px; border-radius:50%; width: 14px; height: 14px"></button></br>
-        <input type="date" name="date" value="today"/><!--I want to set the value to date to today if possible-->
-        <input type="time" name="due" value="00:00"/></br>
-        <input type="text" name="duration" placeholder="How long it takes"/></br>
-
+        <label>When is it due?</label><input type="datetime-local" name="due" id="due" value=''/></br>
+            {{ form.duration.errors }}
+            <label>How long does it take?</label><input type='text' name="duration" placehoder="3 hours, 5 minutes"/></br>
             <button name="Create">Create</button>
         </form>
-    </div>   
+        <script>
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yyyy = today.getFullYear();
+            var hr = today.getHours();
+            var min = today.getMinutes();
+            var sec = today.getSeconds();
+            var mil = today.getMilliseconds();
+
+            if(dd<10) {
+                dd='0'+dd
+            }
+
+            if(mm<10) {
+                mm='0'+mm
+            }
+            if(min<10) {
+                min='0'+min
+            }
+            if(hr<10) {
+                hr='0'+hr
+            }
+
+            today = yyyy+'-'+mm+'-'+dd+'T'+ hr+ ':'+min+':00.000';
+            console.log(today);
+            document.getElementById('due').value = today;
+        </script>
+    </div>
+
+
         
-  </body>
-</html>
+{% endblock %}

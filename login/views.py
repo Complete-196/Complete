@@ -1,5 +1,4 @@
-from django.contrib import messages
-from django.http import HttpResponse
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -20,7 +19,6 @@ def register(request):
 
     if request.method == 'POST':
         form1 = RegistrationForm(request.POST)
-        message = 'something wrong!'
         if form1.is_valid():
             user = User.objects.create_user(
                 username=form1.cleaned_data['username'],
