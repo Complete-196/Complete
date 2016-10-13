@@ -1,0 +1,52 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.column{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header {
+	height: 35px;
+}
+
+.header .logo{
+    width: 100%;
+	display: inline-block;
+	float: left;
+	height: 0px;
+	font-size: 30px;
+}
+
+.header .logo button{
+    line-height: 10px;
+    float: right;
+	padding-top: 20px;
+}
+
+.image{
+	width: 100%;
+    height: 900px;
+	background-color: #808080;
+	background-image: url('http://67.media.tumblr.com/50af8ed4e4afcc4530c83057db147a91/tumblr_nltc6y6pau1rx5rfmo1_1280.gif');
+	background-size: cover;
+}
+
+table{
+	font-size: 18px;
+	padding-top: 100px;
+	text-align: center;
+}
+
+table tr{
+	color: white;
+}
+
+table tr th{
+	padding-right: 210px;
+	font-size: 22px;
+}
