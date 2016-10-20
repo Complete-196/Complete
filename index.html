@@ -1,86 +1,26 @@
 <!DOCHTML html>
-<html>  <head>
+<html>  
+    <head>
+        <link rel="stylesheet" href="settings.css">
     <title>Settings</title>
   </head>
   <body>
-               <div>
-        <p style="font-family: Serif; font-size: 20px">
-            Name
-        <input type="text"></input>
-        </p>
-        <p style="font-family: Arial; font-size: 20px">
-            <input type="button" onclick="Changing password.html';" value="Change Password" />
-        </p>
-        <p style="font-family: Serif; font-size: 20px">
-            Notify?
-            <input type="checkbox" ></input>
+        <div>
+            <h1 style="font-family: Serif; font-size: 30px">
+                <strong>Username</strong>
+            </h1>
+            <p >    
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            </p>
+        <p style="font-size: px">
+            <a href="Changing%20password.html"> <button name="Change Password" style="font-size:20px">Change Password</button></a>
+        <p style="font-family: Serif; font-size: 28px">
+            <strong>Notify?</strong>
+            <input type="checkbox"></input>
         </p>
         <p>
-            <button name="Log Out">Log Out</button>
+            <button name="Log Out" style="font-size:20px">Log Out</button>
         </p>
     </div> 
-   
   </body>
-<body>
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="Changing%20password.html">Changing Password</a>
-
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; settings</span>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.display = "block";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.display = "none";
-}
-</script>
-     
-</body>
-<style>
-body {
-    font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-    display: none;
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 2;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
 </html>
