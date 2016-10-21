@@ -1,0 +1,41 @@
+body{
+    background-color: antiquewhite
+}
+body{
+    background-color: antiquewhite  
+    padding: 100px 5px;
+    margin: 150px 220px;
+    cursor: pointer;
+    width: 150%;
+    height:auto;
+}
+
+input[type=text] {
+    width: 30%;
+    padding: 14px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 5px;
+    margin: 1-px ;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+
+
+
+
