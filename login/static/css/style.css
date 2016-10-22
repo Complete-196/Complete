@@ -17,6 +17,7 @@
 }
 .spacer {
   max-height: 80%;
+  height: 100vh;
   position: relative;
   z-index: 1;
   background: #FFFFFF;
@@ -125,5 +126,5 @@ body {
   background: linear-gradient(to left, #76b852, #8DC26F);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
+  -moz-osx-font-smoothing: grayscale;
 }
