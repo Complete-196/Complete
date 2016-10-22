@@ -250,17 +250,17 @@ permission_id</columns>
       <mandatory>1</mandatory>
       <data-type>VARCHAR(50)(0,-1)|12</data-type>
     </column>
-    <column id="61" parent="8" name="dueTime">
-      <mandatory>1</mandatory>
-      <data-type>VARCHAR(50)(0,-1)|12</data-type>
-    </column>
-    <column id="62" parent="8" name="duration">
+    <column id="61" parent="8" name="duration">
       <mandatory>1</mandatory>
       <data-type>VARCHAR(100)(0,-1)|12</data-type>
     </column>
-    <column id="63" parent="8" name="user_id">
+    <column id="62" parent="8" name="user_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="63" parent="8" name="dueTime">
+      <mandatory>1</mandatory>
+      <data-type>DATETIME(0,-1)|12</data-type>
     </column>
     <key id="64" parent="8">
       <columns>id</columns>

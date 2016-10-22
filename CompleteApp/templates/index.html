@@ -25,8 +25,8 @@
                         <td>{{ item.title }}!!!</td>
                         <td name="dueTime">{{ item.dueTime }}</td>
                         <td>{{ item.duration }}</td>
-                        <td><a href="edit/{{ item.id }}"><i class="fa fa-pencil" style="color: dimgray"/></a></td>
-                        <td><a href="delete/{{ item.id }}"><i class="fa fa-close" style="color: red"/></a></td>
+                        <td><a href="edit/{{ item.uniqueId }}"><i class="fa fa-pencil" style="color: dimgray"/></a></td>
+                        <td><a href="delete/{{ item.uniqueId }}"><i class="fa fa-close" style="color: red"/></a></td>
                     </tr>
                 {% endfor %}
             </table>

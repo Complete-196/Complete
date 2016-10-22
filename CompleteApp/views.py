@@ -36,12 +36,12 @@ def addview(request):
     return render(request, 'newEvent.html', {'form': form})
 @login_required
 def delete(request,id):
-    server = get_object_or_404(Tasks,pk=id).delete()
+    server = Tasks.objects.get(uniqueId=id).delete()
     return HttpResponseRedirect('/CompleteApp')
 
 @login_required()
 def edit(request,id):
-    event = Tasks.objects.get(id=id)
+    event = Tasks.objects.get(uniqueId=id)
     if request.method == 'POST':
         form = NewEventForm(request.POST)
         if form.is_valid():
