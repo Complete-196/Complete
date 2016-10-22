@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
-from CompleteApp.users import Tasks
+from CompleteApp.users import Tasks, TasksForm
 from CompleteApp.forms import *
 
 
@@ -38,23 +38,26 @@ def addview(request):
 def delete(request,id):
     server = get_object_or_404(Tasks,pk=id).delete()
     return HttpResponseRedirect('/CompleteApp')
+
+@login_required()
 def edit(request,id):
-    event = get_object_or_404(Tasks, pk=id)
+    event = Tasks.objects.get(id=id)
     if request.method == 'POST':
         form = NewEventForm(request.POST)
         if form.is_valid():
+            form = TasksForm(form, instance=event)
             model = Tasks(
-                user = request.user,
-                title = form.cleaned_data['title'],
-                dueTime = request.POST.get('due'),
-                duration = form.cleaned_data['duration'],
+                user = Tasks.objects.get(id=id).user,
+                title = request.POST.get('title'),
+                dueTime = request.POST.get('dueTime'),
+                duration = request.POST.get('duration'),
             )
             event.delete()
             model.save()
             return HttpResponseRedirect('/CompleteApp')
     else:
-        form = event
+        form = TasksForm(instance=event)
 
-    return render(request, 'newEvent.html', {'form': form})
+    return render(request, 'editForm.html', {'form': form})
 
 
