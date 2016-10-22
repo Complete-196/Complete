@@ -11,4 +11,3 @@ class NewEventForm(forms.Form):
     duration = forms.RegexField(regex=r'(\w+\s\w+)+$', widget=forms.TextInput(attrs=dict(required=True, max_length=30)),
                                 label=_('Duration'),error_messages={
         'invalid': _("This value must contain only letters, numbers and underscores.")})
-    #due = forms.DateField(widget=forms.TextInput(attrs=dict(required=True, max_length=30)), label=_("Due"))
