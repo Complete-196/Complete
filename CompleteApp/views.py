@@ -47,7 +47,7 @@ def edit(request,id):
         if form.is_valid():
             form = TasksForm(form, instance=event)
             model = Tasks(
-                user = Tasks.objects.get(id=id).user,
+                user = Tasks.objects.get(uniqueId=id).user,
                 title = request.POST.get('title'),
                 dueTime = request.POST.get('dueTime'),
                 duration = request.POST.get('duration'),

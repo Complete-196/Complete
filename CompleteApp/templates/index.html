@@ -8,15 +8,17 @@
 
 
     {% block content %}
-        <div class="form">
+        <div class="spacer">
             <h2>Welcome {{ user.username }}</h2>
-            <table>
+            <table align="center">
                 <colgroup>
                     <col span="3">
                 </colgroup>
                         <td>Task</td>
                         <td>Due Date</td>
                         <td>Duration</td>
+                        <td></td>
+                        <td><a href="addNew"><i style="color: dodgerblue" class="fa fa-plus"/></a></td>
 
                 </br>
                 {% for item in query_results %}
@@ -31,7 +33,6 @@
                 {% endfor %}
             </table>
             <div id="x"></div>
-            <a href="addNew">New event</a>
             <a href="/logout/">Logout</input>
 
             <script>
