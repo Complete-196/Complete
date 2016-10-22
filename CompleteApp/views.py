@@ -38,5 +38,23 @@ def addview(request):
 def delete(request,id):
     server = get_object_or_404(Tasks,pk=id).delete()
     return HttpResponseRedirect('/CompleteApp')
+def edit(request,id):
+    event = get_object_or_404(Tasks, pk=id)
+    if request.method == 'POST':
+        form = NewEventForm(request.POST)
+        if form.is_valid():
+            model = Tasks(
+                user = request.user,
+                title = form.cleaned_data['title'],
+                dueTime = request.POST.get('due'),
+                duration = form.cleaned_data['duration'],
+            )
+            event.delete()
+            model.save()
+            return HttpResponseRedirect('/CompleteApp')
+    else:
+        form = event
+
+    return render(request, 'newEvent.html', {'form': form})
 
 
