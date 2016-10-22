@@ -23,7 +23,7 @@
 
                     <tr>
                         <td>{{ item.title }}!!!</td>
-                        <td>{{ item.dueTime }}</td>
+                        <td name="dueTime">{{ item.dueTime }}</td>
                         <td>{{ item.duration }}</td>
                         <a href="delete/{{ item.id }}">Delete</a>
                     </tr>
@@ -33,5 +33,8 @@
             <a href="addNew">New event</a>
             <a href="/logout/">Logout</input>
 
+            <script>
+                document.getElementsByName('dueTime').innerHTMl = date.Parse(document.getElementsByName('dueTime').innerHTMl)
+            </script>
         </div>
     {% endblock %}
