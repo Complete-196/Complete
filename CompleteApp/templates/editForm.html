@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}
+    New Event
+{% endblock %}
+{% block head %}
+        New Event
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="form">
+        <form method="post" action="."> {% csrf_token %}
+
+        {{ form.title.errors }}
+        {{ form.title }}
+        <button name="color" style="background-color: #F32D12; border: solid 1px; border-radius:50%; width: 14px; height: 14px"></button></br>
+        <label>When is it due? </label> {{ form.dueTime }} </br>
+            {{ form.duration.errors }}
+            <label>How long does it take?</label> {{ form.duration }} </br>
+            <button name="Create">Create</button>
+        </form>
+        <script>
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yyyy = today.getFullYear();
+            var hr = today.getHours();
+            var min = today.getMinutes();
+            var sec = today.getSeconds();
+            var mil = today.getMilliseconds();
+
+            if(dd<10) {
+                dd='0'+dd
+            }
+
+            if(mm<10) {
+                mm='0'+mm
+            }
+            if(min<10) {
+                min='0'+min
+            }
+            if(hr<10) {
+                hr='0'+hr
+            }
+
+            today = yyyy+'-'+mm+'-'+dd+'T'+ hr+ ':'+min;
+            console.log(today);
+            document.getElementById('due').value = today;
+        </script>
+    </div>
+
+
+        
+{% endblock %}
