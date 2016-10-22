@@ -16,13 +16,16 @@
                 </colgroup>
                         <td>Task</td>
                         <td>Due Date</td>
-                        <td>Duration</td></br>
+                        <td>Duration</td>
+
+                </br>
                 {% for item in query_results %}
 
                     <tr>
                         <td>{{ item.title }}!!!</td>
                         <td>{{ item.dueTime }}</td>
                         <td>{{ item.duration }}</td>
+                        <a href="delete/{{ item.id }}">Delete</a>
                     </tr>
                 {% endfor %}
             </table>

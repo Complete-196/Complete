@@ -3,6 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.shortcuts import render_to_response
+from django.shortcuts import redirect
+from django.shortcuts import get_object_or_404
 from CompleteApp.users import Tasks
 from CompleteApp.forms import *
 
@@ -32,4 +34,9 @@ def addview(request):
         form = NewEventForm()
 
     return render(request, 'newEvent.html', {'form': form})
+@login_required
+def delete(request,id):
+    server = get_object_or_404(Tasks,pk=id).delete()
+    return HttpResponseRedirect('/CompleteApp')
+
 
