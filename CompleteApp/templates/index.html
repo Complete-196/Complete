@@ -11,12 +11,16 @@
         <div class="spacer">
             <h2>Welcome {{ user.username }}</h2>
             <table align="center">
+
                 <colgroup>
                     <col span="3">
                 </colgroup>
-                        <td>Task</td>
-                        <td>Due Date</td>
-                        <td>Duration</td>
+                        {% if query_results %}
+                            <td>Task</td>
+                            <td>Start At</td>
+                        {% else %}
+                            <td>Add Event Now</td>
+                        {% endif %}
                         <td></td>
                         <td><a href="addNew"><i style="color: dodgerblue" class="fa fa-plus"/></a></td>
 
@@ -25,8 +29,7 @@
 
                     <tr>
                         <td>{{ item.title }}!!!</td>
-                        <td name="dueTime">{{ item.dueTime }}</td>
-                        <td>{{ item.duration }}</td>
+                        <td name="dueTime" style="padding-left:20px">{{ item.dueTime }}</td>
                         <td><a href="edit/{{ item.uniqueId }}"><i class="fa fa-pencil" style="color: dimgray"/></a></td>
                         <td><a href="delete/{{ item.uniqueId }}"><i class="fa fa-close" style="color: red"/></a></td>
                     </tr>

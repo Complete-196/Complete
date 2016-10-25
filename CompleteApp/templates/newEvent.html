@@ -17,7 +17,10 @@
         <button name="color" style="background-color: #F32D12; border: solid 1px; border-radius:50%; width: 14px; height: 14px"></button></br>
         <label>When is it due?</label><input type="datetime-local" name="due" id="due" value=''/></br>
             {{ form.duration.errors }}
-            <label>How long does it take?</label><input type='text' name="duration" placehoder="3 hours, 5 minutes"/></br>
+            <label>How long does it take?</label></br>
+            <input style="max-width: 32.5%" type='number' placeholder="Days" name="Days" />
+            <input style="max-width: 32.5%" type='number' placeholder="Hours" max="24" name="Hours" />
+            <input style="max-width: 32.5%" type='number' placeholder="Minutes" max="60" name="Minutes"/></br>
             <button name="Create">Create</button>
         </form>
         <script>
