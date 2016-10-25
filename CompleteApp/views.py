@@ -41,16 +41,16 @@ def duration(days, hours, minutes):
     if len(days)<1:
         days = 0
     if len(hours)<1:
-        hours = 0
+        hours = '0'
     if len(minutes)<1:
-        minutes=0
+        minutes= '0'
     days = 1+int(days)
     if days < 10:
         days= '0'+str(days)
     if int(hours) < 10:
         hours = '0'+ hours
     if int(minutes) < 10:
-        minutes = '0'+minutes
+        minutes = '0' + minutes
     return str(days)+' '+hours+':'+minutes
 
 @login_required
