@@ -68,16 +68,20 @@ def edit(request,id):
             model = Tasks(
                 user = Tasks.objects.get(uniqueId=id).user,
                 title = request.POST.get('title'),
-                dueTime = request.POST.get('dueTime'),
-                duration = request.POST.get('duration'),
+                dueTime = request.POST.get('due'),
+                duration = duration(request.POST.get('Days'), request.POST.get('Hours'),request.POST.get("Minutes")),
             )
             event.delete()
             model.save()
             return HttpResponseRedirect('/CompleteApp')
     else:
         form = TasksForm(instance=event)
+    day = int(event.duration.split(' ')[0])-1
+    hour = int(event.duration.split(' ')[1].split(':')[0])
+    minute = int(event.duration.split(' ')[1].split(':')[1])
+    event.dueTime=str(event.dueTime).split(' ')[0] + "T" + str(event.dueTime).split(" ")[1].split("+")[0]
 
-    return render(request, 'editForm.html', {'form': form})
+    return render(request, 'editForm.html', {"day": day, "hour": hour, "minute":minute,"event" : event,'form': form})
 
 '''
 def handler404(request):
