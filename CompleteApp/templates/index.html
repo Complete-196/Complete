@@ -17,7 +17,7 @@
                 </colgroup>
                         {% if query_results %}
                             <td>Task</td>
-                            <td>Start At</td>
+                            <td>Start On</td>
                         {% else %}
                             <td></td>
                             <td>Add Event Now</td>
@@ -29,7 +29,7 @@
                 {% for item in query_results %}
 
                     <tr>
-                        <td>{{ item.title }}!!!</td>
+                        <td>{{ item.title }}</td>
                         <td name="dueTime" style="padding-left:20px">{{ item.dueTime }}</td>
                         <td><a href="edit/{{ item.uniqueId }}"><i class="fa fa-pencil" style="color: dimgray"/></a></td>
                         <td><a href="delete/{{ item.uniqueId }}"><i class="fa fa-close" style="color: red"/></a></td>
