@@ -114,9 +114,9 @@ def niceString(dedline):
                 7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}
     hourfloat = {0:'12',1:'1',2:'2',3:'3',4:'4',5:'5',6:'6',7:'7',8:'8',9:'9',10:'10',11:'11',12:'12'}
     minutes = {00:'00',01:'01',02:'02',03:'03',04:'04',05:'05',06:'06',07:'07', 8:'08', 9:'09'}
-    return monthmap[dedline.tm_mon] + " " + str(dedline.tm_mday)+ " at " + hourfloat[dedline.tm_hour%13] + ":"+ \
+    return monthmap[dedline.tm_mon] + " " + str(dedline.tm_mday)+ " at " + hourfloat[(dedline.tm_hour)%12] + ":"+ \
            (minutes[dedline.tm_min] if dedline.tm_min<10 else str(dedline.tm_min)) + \
-            (" AM" if dedline.tm_hour/12 < 1 and dedline.tm_hour/12 !=2 else " PM")
+            (" AM" if (dedline.tm_hour)/12 < 1 and dedline.tm_hour/12 !=2 else " PM")
 
 def organizer(a):
     x = sys.maxint
