@@ -20,7 +20,7 @@
             <input type="datetime-local" name="due" id="due" value='{{ event.dueTime }}'/> </br>
             {{ form.duration.errors }}
             <label>How long does it take?</label></br>
-            <input style="max-width: 32.5%" type='number' value="{{ day }}" placeholder="Days" name="Days" />
+            <input style="max-width: 32.5%" type='number' value="{{ day }}" placeholder="Days" max="28" name="Days" />
             <input style="max-width: 32.5%" type='number' value="{{ hour }}" placeholder="Hours" max="24" name="Hours" />
             <input style="max-width: 32.5%" type='number' value="{{ minute }}" placeholder="Minutes" max="60" name="Minutes"/></br>
             <button name="Create">Edit</button>
