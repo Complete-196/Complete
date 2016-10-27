@@ -13,7 +13,8 @@ from CompleteApp.forms import *
 @login_required
 def index(request):
 
-    query_results =  organizer(list(Tasks.objects.filter(user_id=request.user).order_by('dueTime')))
+    query_results = organizer(Tasks.objects.filter(user_id=request.user).order_by('dueTime'))
+    print query_results
     return render_to_response("index.html",
                                {"query_results" : query_results, 'user':request.user})
 
