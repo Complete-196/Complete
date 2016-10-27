@@ -1,6 +1,6 @@
 body{
 	margin: 0;
-	padding: 0;
+	padding: 0;;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 }
@@ -12,6 +12,7 @@ body{
 
 .header {
 	height: 35px;
+	background-color: gray;
 }
 
 .header .logo{
@@ -25,7 +26,15 @@ body{
 .header .logo button{
     line-height: 10px;
     float: right;
-	padding-top: 20px;
+	padding-top: 11px;
+	font: 'Roboto', sans-serif;
+}
+
+button{
+	background-color: gray;	
+	border-color: gray;
+	color: black;
+	padding-bottom: 11px;
 }
 
 .image{
@@ -36,17 +45,34 @@ body{
 	background-size: cover;
 }
 
-table{
-	font-size: 18px;
-	padding-top: 100px;
-	text-align: center;
-}
-
-table tr{
+.container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: baseline;
+	align-content: space-between;
+	height: 210px;
 	color: white;
+  	list-style: none;
+  	justify-content: space-around;
 }
 
-table tr th{
-	padding-right: 210px;
-	font-size: 22px;
+.item-header{
+	flex: none;
+	align-self: auto;
+	line-height: 40px;
+	margin: auto;
+	font-size: 24px;
+ 	color: white;
+  	text-align: center;
+}
+
+.item{
+	flex: none;
+	align-self: auto;
+	line-height: 40px;
+	margin: auto;
+	font-size: 24px;
+ 	color: white;
+  	text-align: center;
 }
