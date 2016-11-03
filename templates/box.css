@@ -1,3 +1,18 @@
-.boxed{
-border: 1px solid back;
+.boxed {
+  background-color: lightsteelblue;
+    width: 300px;
+    height: 80px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+}
+p{
+    position:relative;
+    left:8px;
+    top:5px;
+    color: #47405E;
+}
+span{
+    font-family: monospace;
+    font-size: 20px;
 }
