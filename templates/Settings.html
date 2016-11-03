@@ -1,68 +1,40 @@
-<!DOCTYPE html>
+<!DOCHTML html>
 <html>
-<style>
-body {
-    font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-    display: none;
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+    <head>
+        <link rel="stylesheet" href="settings.css">
+    <title>Settings</title>
+  </head>
 <body>
-
+    
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="complete_Setting.html">About</a>
+            <p1 style="font-size:25px;">Username</p1>
+            <p>
+         
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            </p>
+        <p style="font-size: px">
+            <a href="Changing%20password.html"> <button name="Change Password" style="font-size:20px">Change Password</button></a>
+            <p1 style="font-size:20px;">Notify?<input type="checkbox"/></p1>
+        <p>
+            <button name="Log Out" style="font-size:20px">Log Out</button>
+        </p>
+    </div>
+  
 
-</div>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Settings</span>
 
 <script>
 function openNav() {
-    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("mySidenav").style.width = "250px";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("mySidenav").style.width = "0";
 }
 </script>
      
 </body>
 </html>
+
