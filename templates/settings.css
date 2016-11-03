@@ -1,41 +1,78 @@
+
 body{
     background-color: antiquewhite
-}
-body{
-    background-color: antiquewhite  
     padding: 100px 5px;
     margin: 150px 300px;
     cursor: pointer;
-    width: 150%;
+    width: 100%;
     height:auto;
 }
-
+h2{
+    text-align: center;
+}
 input[type=text] {
-    width: 30%;
-    padding: 14px 20px;
+    width: 80%;
+    padding: 10px 1px;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     box-sizing: border-box;
 }
-input[type=checkbox]
-{
-  /* Double-sized Checkboxes */
-  -ms-transform: scale(1.5); /* IE */
-  -moz-transform: scale(1.5); /* FF */
-  -webkit-transform: scale(1.5); /* Safari and Chrome */
-  -o-transform: scale(1.5); /* Opera */
-  padding: 10px;
-}
+
 button {
-    background-color: #4CAF50;
+    background-color: #1F811A;
     color: white;
-    padding: 10px 5px;
-    margin: 1-px ;
+    padding:10px;
+    margin: 2px ;
     border: none;
     cursor: pointer;
-    width: 30%;
+    width: 5-%;
+}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
 }
 
+.sidenav {
+    height: 80%;
+    width: ;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #48AA41;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
+.sidenav a {
+    padding: 10px 10px 10px 1px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
 
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
 
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>

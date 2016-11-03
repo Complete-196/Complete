@@ -1,13 +1,17 @@
 <!DOCHTML html>
 <html>
-    <head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<head>
         <link rel="stylesheet" href="settings.css">
     <title>Settings</title>
   </head>
   <body>
         <div>
-            <h1 style="font-family: Serif; font-size: 30px">
-                <strong>Username1</strong>
+            <h1 style="font-family: Serif; font-size: 28px">
+                <strong>Username</strong>
             </h1>
             <p >
                 <input type="text" placeholder="Enter Username" name="uname" required>
@@ -23,4 +27,22 @@
         </p>
     </div>
   </body>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Settings</span>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("main").style.marginLeft = "200px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
 </html>
