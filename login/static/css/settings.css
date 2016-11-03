@@ -1,4 +1,4 @@
-
+/*
 body{
     background-color: antiquewhite
     padding: 100px 5px;
@@ -24,10 +24,10 @@ input[type=text] {
     left:10px;
     border-radius: 5px;
 }
-
+*/
 button {
-    background-color: darkslategrey;
-    color: whitesmoke;
+    background-color: white;
+    color: black;
     padding:10px;
     margin: 2px ;
     border: none;
@@ -37,20 +37,21 @@ button {
     position:relative;
     left: 5px;
     font-family:monospace;
-}
+}/*
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
 }
 
+*/
 .sidenav {
-    height: 80%;
+    height: 100%;
     width: 235px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #818181;
+    background-color: #4C9B50;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -60,7 +61,7 @@ body {
     padding: 10px 10px 10px 1px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: black;
     display: block;
     transition: 0.3s;    
 }
