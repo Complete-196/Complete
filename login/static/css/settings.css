@@ -51,7 +51,11 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
+<<<<<<< HEAD:templates/settings.css
+    background-color: #90B44B;
+=======
     background-color: #4C9B50;
+>>>>>>> c8457ed8a6bc0141db4a3e846194999da9821749:login/static/css/settings.css
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -61,7 +65,11 @@ body {
     padding: 10px 10px 10px 1px;
     text-decoration: none;
     font-size: 25px;
+<<<<<<< HEAD:templates/settings.css
+    color: #90B44B;
+=======
     color: black;
+>>>>>>> c8457ed8a6bc0141db4a3e846194999da9821749:login/static/css/settings.css
     display: block;
     transition: 0.3s;    
 }
