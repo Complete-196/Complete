@@ -9,7 +9,8 @@
 
     {% block content %}
         <div class="spacer">
-            <h2>Welcome {{ user.username }}</h2>
+            <span style="float:left;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <h1>Complete</h1>
             <table align="center">
 
                 <colgroup>
@@ -37,6 +38,27 @@
                 {% endfor %}
             </table>
             <div id="x"></div>
-            <a href="/logout/">Logout</a>
+
+
+            <div id="mySidenav" class="sidenav" style="width: 0;">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <h2>Welcome {{ user.username }}</h2>
+                <a href="Changing%20password.html"> <button name="Change Password" style="font-size:20px">Change Password</button></a>
+                <p1 style="font-size:20px;">Notify?<input type="checkbox"/></p1>
+                <form action="/logout/">
+                    <button name="Log Out" style="font-size:20px">Log Out</button>
+                </form>
+            </div>
+
+            <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            </script>
         </div>
+
     {% endblock %}
