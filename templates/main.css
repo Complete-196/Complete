@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
+@import url(font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Itim|Open+Sans|Poppins');
+
+body{
+background: #e96443; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #e96443 , #904e95); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.parent{
+	border: 5px solid white;
+	padding-top: 30px;
+}
+
+h1{
+	padding: 10px;
+	color: white;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 60px;
+	text-shadow:3px 3px 5px black;
+}
+
+
+#header h1 {
+			margin-bottom: 0.5em;
+		}
+
+		#header .inner {
+			position: relative;
+			z-index: 1;
+		}
+
+			#header.alt h1 {
+				font-size: 4em;
+				padding: 0 0.5em 0.25em 0.5em;
+				border-bottom: solid 2px #ffffff;
+				font-weight: 200;
+				font-family: "Source Sans Pro", Helvetica, sans-serif;
+				text-transform: none;
+				letter-spacing: 0;
+			}
+
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.picLeft{
+	margin: 0 10px 0 10px;
+}
