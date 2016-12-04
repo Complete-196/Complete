@@ -1,6 +1,9 @@
 import time
 import sys
+
+from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.shortcuts import render_to_response
@@ -130,3 +133,26 @@ def organizer(a):
         k.dueTime = niceString(dedline)
         x = toEpoch(deadline(i, j))
     return a
+
+
+@login_required
+def password(request):
+    passed = ""
+
+    if request.method == "POST":
+        form = RegistrationForm(request.POST)
+        if request.POST.get("password") is None or len(request.POST.get("password")) == 0:
+            passed = "Missing current password"
+        if form.is_valid():
+            user = authenticate(username = request.user, password = request.POST.get('password'))
+            if user is not None:
+                u = User.objects.get(username = request.user)
+                u.set_password(request.POST.get('password1'))
+                u.save()
+                HttpResponseRedirect("/CompleteApp")
+            else:
+                print form.errors.values
+    else:
+        form = RegistrationForm()
+
+    return render(request, "changePassword.html", {"form":form, "pass":passed})
