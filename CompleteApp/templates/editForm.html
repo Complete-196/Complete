@@ -15,7 +15,7 @@
         {{ form.title.errors }}
         <input type="text" style="width:90%;" name="title" placeholder="Your Task" value="{{ event.title }}"/>
 
-        <button name="color" style="background-color: #F32D12; border: solid 1px; border-radius:50%; width: 14px; height: 14px"></button></br>
+        <input type="color" id="myColor" name="color" value="{{ event.color }}" style="background-color: #F32D12; color: #F32D12; border: solid 1px; border-radius:5%; width: 30px; height: 35px; margin-top:15px;margin-bottom:15px;padding: 1px; box-sizing: border-box"></br>
         <label>When is it due? </label>
             <input type="datetime-local" name="due" id="due" value='{{ event.dueTime }}'/> </br>
             {{ form.duration.errors }}

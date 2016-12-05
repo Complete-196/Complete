@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.forms import ModelForm, DateTimeInput
 from django import forms
+from colorfield.fields import ColorField
 
 
 class Tasks(models.Model):
@@ -12,6 +13,7 @@ class Tasks(models.Model):
     title = models.CharField(max_length=50)
     dueTime = models.DateTimeField(max_length=50)
     duration = models.CharField(max_length=100)
+    color = ColorField(default='#FF0000')
 
 class MyDateTimeInput(DateTimeInput):
     input_type = 'datetime'

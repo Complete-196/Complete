@@ -30,7 +30,8 @@ def addview(request):
                     user=request.user,
                     title= form.cleaned_data['title'],
                     dueTime= request.POST.get('due'),
-                    duration= duration(request.POST.get('Days'), request.POST.get('Hours'),request.POST.get("Minutes"))#form.cleaned_data['duration'],
+                    duration= duration(request.POST.get('Days'), request.POST.get('Hours'),request.POST.get("Minutes")),#form.cleaned_data['duration'],
+                    color= request.POST.get('color')
                 )
                 model.save()
                 return HttpResponseRedirect('/CompleteApp')
@@ -74,6 +75,7 @@ def edit(request,id):
                 title = request.POST.get('title'),
                 dueTime = request.POST.get('due'),
                 duration = duration(request.POST.get('Days'), request.POST.get('Hours'),request.POST.get("Minutes")),
+                color=request.POST.get('color')
             )
             event.delete()
             model.save()

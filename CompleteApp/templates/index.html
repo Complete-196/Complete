@@ -17,6 +17,7 @@
                     <col span="3">
                 </colgroup>
                         {% if query_results %}
+                            <td></td>
                             <td>Task</td>
                             <td>Start On</td>
                         {% else %}
@@ -30,6 +31,7 @@
                 {% for item in query_results %}
 
                     <tr>
+                        <td name="color" style ="color: {{ item.color }}; font-size: 40px; padding: 0px; margin: 0px;">•</td>
                         <td>{{ item.title }}</td>
                         <td name="dueTime" style="padding-left:20px">{{ item.dueTime }}</td>
                         <td><a href="edit/{{ item.uniqueId }}"><i class="fa fa-pencil" style="color: dimgray"/></a></td>
