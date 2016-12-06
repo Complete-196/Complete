@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b65c89d-0321-4f43-87cb-e2dbc5f214fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login/templates/registration/confirm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login/templates/registration/subject_name.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/complete/loginapp.sqlite" afterPath="$PROJECT_DIR$/complete/loginapp.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/complete.iml" afterPath="$PROJECT_DIR$/.idea/complete.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/95135e97-8b5d-47e4-99d1-cf2f280bfabc.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/95135e97-8b5d-47e4-99d1-cf2f280bfabc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/complete/settings.py" afterPath="$PROJECT_DIR$/complete/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/complete/urls.py" afterPath="$PROJECT_DIR$/complete/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/forms.py" afterPath="$PROJECT_DIR$/login/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/static/js/index.js" afterPath="$PROJECT_DIR$/login/static/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/templates/registration/login.html" afterPath="$PROJECT_DIR$/login/templates/registration/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/views.py" afterPath="$PROJECT_DIR$/login/views.py" />
     </list>
     <ignored path="complete.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,8 +84,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -153,12 +142,12 @@
         <option value="$PROJECT_DIR$/login/forms.py" />
         <option value="$PROJECT_DIR$/login/views.py" />
         <option value="$USER_HOME$/venv/lib/python2.7/site-packages/django/contrib/auth/views.py" />
-        <option value="$PROJECT_DIR$/login/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/complete/settings.py" />
         <option value="$USER_HOME$/venv/lib/python2.7/site-packages/django/contrib/auth/locale/en/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/login/templates/registration/subject_name.txt" />
         <option value="$PROJECT_DIR$/login/templates/registration/confirmation.html" />
         <option value="$PROJECT_DIR$/complete/urls.py" />
+        <option value="$PROJECT_DIR$/login/templates/registration/login.html" />
       </list>
     </option>
   </component>
@@ -1034,8 +1023,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding />
         </state>
       </provider>
