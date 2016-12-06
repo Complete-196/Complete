@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Itim|Open+Sans|Poppins');
 
 body{
-background: #e96443; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #e96443 , #904e95); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #255c99; /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #e3d888, #255c99); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #e3d888, #255c99); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .parent{
 	border: 5px solid white;
-	padding-top: 600px;
+	padding-top: 30px;
 }
 
 h1{
@@ -18,7 +18,7 @@ h1{
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
 	font-size: 60px;
-	text-shadow:3px 3px 5px black;
+	text-shadow:2px 2px 3px black;
 }
 
 
