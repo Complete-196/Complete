@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+    New Event
+{% endblock %}
+{% block head %}
+        New Event
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="form">
+        <form method="post" action="."> {% csrf_token %}
+
+        {{ form.title.errors }}
+        <input type="text" style="width:90%;" name="title" placeholder="Your Task" value="{{ event.title }}"/>
+
+        <input type="color" id="myColor" name="color" value="{{ event.color }}" style="background-color: #F32D12; color: #F32D12; border: solid 1px; border-radius:5%; width: 30px; height: 35px; margin-top:15px;margin-bottom:15px;padding: 1px; box-sizing: border-box"></br>
+        <label>When is it due? </label>
+            <input type="datetime-local" name="due" id="due" value='{{ event.dueTime }}'/> </br>
+            {{ form.duration.errors }}
+            <label>How long does it take?</label></br>
+            <input style="max-width: 32.5%" type='number' value="{{ day }}" placeholder="Days" max="28" min="0" name="Days" />
+            <input style="max-width: 32.5%" type='number' value="{{ hour }}" placeholder="Hours" max="24" min="0" name="Hours" />
+            <input style="max-width: 32.5%" type='number' value="{{ minute }}" placeholder="Minutes" max="60" min="0" name="Minutes"/></br>
+            <button name="Create">Edit</button>
+        </form>
+
+    </div>
+
+{% endblock %}
+
+        

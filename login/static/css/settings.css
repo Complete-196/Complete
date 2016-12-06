@@ -1,0 +1,85 @@
+/*
+body{
+    background-color: antiquewhite
+    padding: 100px 5px;
+    margin: 150px 300px;
+    cursor: pointer;
+    width: 100%;
+    height:auto;
+}
+
+p1{
+    font-family:monospace;
+    font-size: 24px;
+    position: relative;
+    left:15px;
+}
+input[type=text] {
+    width: 80%;
+    padding: 10px 1px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    position:relative;
+    left:10px;
+    border-radius: 5px;
+}
+*/
+button {
+    background-color: white;
+    color: black;
+    padding:10px;
+    margin: 2px ;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 5px;
+    position:relative;
+    left: 5px;
+    font-family:monospace;
+}/*
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+*/
+.sidenav {
+    height: 100%;
+    width: 235px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #4C9B50;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 10px 10px 10px 1px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;    
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

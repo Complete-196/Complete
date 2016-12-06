@@ -28,7 +28,7 @@ SECRET_KEY = '2^8awd^7+#sdlzn7d79f62x0oqnh6u6_qbym$(d9h6=mz_08(n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '111.222.333.444', 'mywebsite.com']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'CompleteApp',
     'login',
+    'colorfield',
 ]
 
 MIDDLEWARE = [
@@ -128,6 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = "login/static/"
 
 '''
 TEMPLATE_DIRS = (
