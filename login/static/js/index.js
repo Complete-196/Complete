@@ -7,7 +7,12 @@ function myFunction(button) {
     }
     else if (button == 'login') {
         document.getElementById("register").className = "register-form";
+        document.getElementById("forgot").className="register-form";
         document.getElementById('login').className = "login-form";
+    }
+    else if (button == 'forgot'){
+        document.getElementById('login').className="register-form";
+        document.getElementById('forgot').className="login-form";
     }
 
 }
