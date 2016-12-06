@@ -131,6 +131,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = "login/static/"
 
+#Email server to send the email resets.
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'CompleteApp2@gmail.com'
+EMAIL_HOST_PASSWORD = '77a2fcbbfa' #This is not your gmail password.
+EMAIL_USE_TLS = True
+
 '''
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
