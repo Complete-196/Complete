@@ -6,3 +6,5 @@
 .ebextensions/
 .elasticbeanstalk/
 .idea/
+#SQLLite
+.sqllite3
