@@ -16,6 +16,10 @@ For the virtualenv:
 ```
 $ pip install virtualenv virtualenvwrapper
 ```
+In addition, get colorfield.
+```
+$ pip install django-colorfield
+```
 
 Once the virtualenv is installed, Django is required for the project:
 To enter virtual environment
@@ -27,7 +31,7 @@ $ pip install django
 The setup for the project is finished. Specification of the interpreter is required, use virtualenv python 2.7.
 
 
-##Windows 8
+##Windows
 To use the project, you need to have pip and a virtual environment installed.
 For installing pip (assuming python doesn't have it bundled):
 Download get-pip.py : https://bootstrap.pypa.io/get-pip.py, save it as a .py file
@@ -35,11 +39,16 @@ Run in command prompt/powershell:
 ```
 $ python get-pip.py
 ```
-For installing the virtual environment:
+For installing the virtual environment (For Windows 10, don't need the wrapper):
 ```
 $ pip install virtualenv
 $ pip install virtualenvwrapper-powershell
 ```
+In addition, get colorfield.
+```
+$ pip install django-colorfield
+```
+
 Next, run Windows Powershell as an Administrator 
 (generally found in C:\Windows\System32\WindowsPowerShell\v1.0C:\Windows\System32\WindowsPowerShell\v1.0)
 Once in, you need to change your script execution policy:
