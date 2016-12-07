@@ -2,3 +2,7 @@
 .DS_Store
 #auto generated pycharm file
 .pyc
+#EB/ idea exts
+.ebextensions
+.elasticbeanstalk
+.idea
