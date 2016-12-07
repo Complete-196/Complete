@@ -85,7 +85,7 @@ video#bgvid {
 }
 .form .message {
   margin: 15px 0 0;
-  color: #b3b3b3;
+  color: #FFFFFF;
   font-size: 12px;
 }
 .form .message a {
@@ -118,7 +118,7 @@ video#bgvid {
   color: #1a1a1a;
 }
 .container .info span {
-  color: #4d4d4d;
+  color: #FFFFFF;
   font-size: 12px;
 }
 .container .info span a {
