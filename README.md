@@ -1,9 +1,9 @@
 # Complete
 ## This app is awesome !!!
 #### @authors tiopi, aokennard
-The front end will be done in HTML, Sass and Angular.JS
+The front end will be done in HTML, CSS, and a little Ajax
 
-The backend will be done in python using django or flask
+The backend was done in python using Django.
 
 
 ##Mac
