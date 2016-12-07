@@ -7,7 +7,9 @@
 		url('../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
 	font-weight: normal;
 	font-style: normal;
+	
 } /* Made with http://icomoon.io/ */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Itim|Open+Sans|Poppins');
 
 .cbp_tmtimeline {
 	margin: 30px 0 0 0;
@@ -39,6 +41,7 @@
 	padding-right: 100px;
 	position: relative;
     padding-bottom: 5px;
+	font-family: 'Roboto', sans-serif;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span {
@@ -48,7 +51,7 @@
 
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
 	font-size: 1.3em;
-	color: #3e78b2;
+	color: white;
     position:relative;
     left:20px;
 }
@@ -70,15 +73,16 @@
 	color: #fff;
 	padding: 2em;
 	font-size: 1.0em;
-	font-weight: 300;
+	font-weight: 100;
 	line-height: 1;
     width:40%;
 	position: relative;
 	border-radius: 5px;
+	font-family: 'Roboto', sans-serif;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-	background: #e3d888;
+	background: #ccad35;
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel h2 {
@@ -122,7 +126,7 @@
 	color: #fff;
 	background: #222e50;
 	border-radius: 50%;
-	box-shadow: 0 0 0 8px #e3d888;
+	box-shadow: 0 0 0 8px #ccad35;
 	text-align: center;
 	left: 20%;
 	top: 0;
