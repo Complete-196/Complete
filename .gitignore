@@ -1,8 +1,8 @@
 #mac auto generated file
-.DS_Store
+*.DS_Store
 #auto generated pycharm file
-.pyc
+*.pyc
 #EB/ idea exts
-.ebextensions
-.elasticbeanstalk
-.idea
+.ebextensions/
+.elasticbeanstalk/
+.idea/
