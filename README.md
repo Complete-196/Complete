@@ -1,10 +1,6 @@
 # Complete
-## This app is awesome !!!
+## A Django-based application that handled procrastination by recommending times you should start projects
 #### @authors tiopi, aokennard
-The front end will be done in HTML, CSS, and a little Ajax
-
-The backend was done in python using Django.
-
 
 ##Mac
 To use this project, you have to download pip and a virtualenv.
@@ -69,3 +65,8 @@ Once in the virtual environment, denoted by a prefix of (virtual-env-name-here) 
 $ pip install django
 ```
 The setup for the project is finished. Specification of the interpreter is required, use virtualenv python 2.7.
+
+#Stack
+Frontend: HTML, CSS, a little Ajax
+
+Backend: Python using Django.
