@@ -89,14 +89,6 @@ def edit(request,id):
 
     return render(request, 'editForm.html', {"day": day, "hour": hour, "minute":minute,"event" : event,'form': form})
 
-'''
-def handler404(request):
-    response = render_to_response('404.html', {},
-                                  context_instance=RequestContext(request))
-    response.status_code = 404
-    return response
-'''
-
 
 
 def toEpoch(date):
@@ -116,11 +108,11 @@ def deadline(due, duration):
     return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(deadline))
 
 def niceString(dedline):
-    monthmap = {1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',
+    monthMap = {1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',
                 7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}
-    hourfloat = {0:'12',1:'1',2:'2',3:'3',4:'4',5:'5',6:'6',7:'7',8:'8',9:'9',10:'10',11:'11',12:'12'}
+    hourMap = {0:'12',1:'1',2:'2',3:'3',4:'4',5:'5',6:'6',7:'7',8:'8',9:'9',10:'10',11:'11',12:'12'}
     minutes = {00:'00',01:'01',02:'02',03:'03',04:'04',05:'05',06:'06',07:'07', 8:'08', 9:'09'}
-    return monthmap[dedline.tm_mon] + " " + str(dedline.tm_mday)+ " at " + hourfloat[(dedline.tm_hour)%12] + ":"+ \
+    return monthMap[dedline.tm_mon] + " " + str(dedline.tm_mday)+ " at " + hourMap[(dedline.tm_hour)%12] + ":"+ \
            (minutes[dedline.tm_min] if dedline.tm_min<10 else str(dedline.tm_min)) + \
             (" AM" if (dedline.tm_hour)/12 < 1 and dedline.tm_hour/12 !=2 else " PM")
 
@@ -140,7 +132,6 @@ def organizer(a):
 @login_required
 def password(request):
     passed = ""
-
     if request.method == "POST":
         form = RegistrationForm(request.POST)
         if request.POST.get("password") is None or len(request.POST.get("password")) == 0:

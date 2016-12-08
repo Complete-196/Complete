@@ -7,4 +7,5 @@
 .elasticbeanstalk/
 .idea/
 #SQLLite
-*.sqllite3
+*.sqlite3
+*.sqlite
